@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .weerkotje{
+            width:700px;
+            margin:auto;
+            height:700px;
+            display:block;
+            background-color:#111;
+            filter:alpha(opacity=50);
+            color:white;
+            list-style-type:none;
+            text-align:center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .weer:first-of-type{
+           height:300px;
+           font-size: 20px;
+        }
+        .weer:first-of-type .w{
+            font-size:32px;
+        }
+    </style>
+</head>
+<body ng-controller="WeerController">
+
+    <h1>Weer in Kortrijk</h1>
+    <ul class="weerkotje">
+        <li class="weer" ng-repeat="w in weatherforecasts | orderBy: 'date'">
+            <div class="w">
+                {{w.Day}} {{w.Date}}
+            </div>
+            <p class="forecast">{{w.Description}}</p>
+            <p class="lowhigh">{{w.MinT}} / {{w.MaxT}}</p>
+        </li>
+    </ul>
+
+
+
+
+
+    <script src="../../scripts/angular.js"></script>
+    <script src="Weer.js"></script>
+    <script src="WeerController.js"></script>
+</body>
+</html>

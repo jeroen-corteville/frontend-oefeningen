@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Gegevens</title>
+</head>
+<body>
+    <form onsubmit="return ValidateForm()">
+        <p>Contact Gegevens</p>
+        <label for="voornaam">
+            Voornaam
+        </label>
+        <br />
+        <input type="text" id="voornaam" placeholder="voornaam"/>
+        <br />
+        <label for="naam">
+            Naam
+        </label>
+        <br />
+        <input type="text" id="naam" />
+        <br />
+        <label for="email">
+            Email
+        </label>
+        <br />
+        <input type="text" id="email" />
+        <br />
+        <button type="submit">OK</button>
+    </form>
+    <script>
+        function ValidateForm() {
+            if (document.getElementById("voornaam").innerHTML == "") {
+                document.getElementById("voornaam").style.borderColor = "red";
+            }
+            if (document.getElementById("naam").innerHTML == "") {
+                document.getElementById("naam").style.borderColor = "red";
+            }
+
+        }
+    </script>
+</body>
+</html>

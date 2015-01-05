@@ -1,0 +1,21 @@
+aside{
+	width: 200px;
+	position: fixed;
+	height:600px;
+	background-color:#DDD;
+}
+
+aside label {
+	float:left;
+	width:200px;
+}
+
+.content {
+	background-color: #red;
+	width: auto;
+	height:1000px;
+	position: relative;
+	z-index: 1;
+	overflow: auto;
+
+}

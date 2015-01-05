@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app>
+    <div ng-controller="DemoController">
+        <button type="button" ng-click="toggle()">Hide</button>
+        Enter your name: <input type="text" placeholder="your name" ng-model="name" />
+        <p>
+            your name: {{ name }}
+        </p>
+        <p ng-show="visible">
+            your name <span ng-bind="name"></span>
+        </p>
+        
+    </div>
+    <script src="../../scripts/angular.js"></script>
+    <script>
+        function DemoController($scope) {
+            $scope.name = "Dieter";
+            $scope.toggle = function () {
+                $scope.visible = !$scope.visible;
+            };
+            $scope.visible = true
+        }
+    </script>
+</body>
+</html>

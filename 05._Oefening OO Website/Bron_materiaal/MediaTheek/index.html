@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediaTheek</title>
+
+    <link href="styles/normalize.css" rel="stylesheet">    
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/Style.css" rel="stylesheet" />
+</head>
+<body>
+       <nav id="sideNavigation" role="main">
+           <ul>
+               <li>
+				<button id="ShowQueryButton" class="btn btn-default">
+					<i class="glyphicon glyphicon-search"></i>
+				</button>
+			   </li>
+			   <li>
+				<button id="ShowImagesButton" class="btn btn-primary">
+					<i class="glyphicon glyphicon-picture"></i>
+				</button>
+			   </li>
+			   <li>
+				<button id="ShowStatisticsButton" class="btn btn-default">
+					<i class="glyphicon glyphicon-hdd"></i>
+				</button>
+			   </li>
+           </ul>
+       </nav>
+
+
+
+    <div id="wrapper">
+        <section id="searchSection" class="page-header">
+            <h2>Search</h2>
+            <input id="SearchField" type="text" />
+            <button id="SearchButton" class="btn btn-default">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+            </button>
+            <ul id="SearchTerms">
+                
+            </ul>
+        </section>
+        <section id="mediaSection">
+            <ul id="mediaList"></ul>
+        </section>
+    </div>
+        <script src="scripts/jquery-1.9.0.min.js"></script>
+        <script src="scripts/kevinderudder.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/Chart.min.js"></script>
+        <script src="scripts/ChartOptions.js"></script>
+        <script src="js/Media/Media.js"></script>
+        <script src="js/Media/MediaController.js"></script>
+</body>
+</html>

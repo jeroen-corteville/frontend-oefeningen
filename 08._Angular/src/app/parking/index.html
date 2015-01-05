@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        ul {
+            list-style-type:none;
+        }
+
+        .parking{
+            display:inline-block;
+            width:200px;
+            height:200px;
+            background-color:green;
+            color:white;
+            margin:10px;
+            padding:10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .p {
+            font-size:20px;
+            
+        }
+    </style>
+</head>
+<body ng-controller="ParkingController">
+
+    <h1>Parkings in Gent {{parkings.length}}</h1>
+    
+    <select ng-model="sortOrder">
+        <option value="AvailableCapacity">Beschikbare Plaatsen</option>
+        <option value="Description">Beschrijving</option>
+        <option value="-Description">Beschrijving aflopen</option>
+    </select>
+    
+    
+    
+    
+    <ul>
+        <li class="parking" ng-repeat="p in parkings | orderBy: sortOrder">
+            <div class="p">
+                P
+            </div>
+            <p class="info">{{p.Description}}</p>
+            <p class="stats">{{p.AvailableCapacity}} / {{p.TotalCapacity}}</p>
+        </li>
+    </ul>
+
+
+
+    <script src="../../scripts/angular.js"></script>
+    <script src="Parking.js"></script>
+    <script src="ParkingController.js"></script>
+</body>
+</html>

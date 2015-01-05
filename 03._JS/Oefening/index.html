@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Personen</title>
+	<link rel="stylesheet" type="text/css" href="css.css"/>
+</head>
+<body>
+    <aside>
+        <form action="">
+            <label for="naam">Naam</label>
+            <input id="naam" placeholder="Naam" required type="text"/>
+            <label for="voornaam">Voornaam</label>
+            <input placeholder="Voornaam" required type="text" id="voornaam"/>
+            <label for="leeftijd">Leeftijd</label>
+            <input placeholder="Leeftijd" required type="number" id="leeftijd"/>
+            <label for="urlimage">Url Image</label>
+            <input placeholder="Url Image" required type="url" id="urlimage"/>
+            <input type="submit" value="Save" onclick="testJs()"/>
+        </form>
+    </aside>
+    <div class="content">
+        Dit is de content
+
+
+    </div>
+    
+	
+<script>
+	function testJs(){
+	window.alert("Javascript werkt");
+	}
+</script>
+</body>
+</html>
